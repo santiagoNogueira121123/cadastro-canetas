@@ -1,0 +1,43 @@
+# Ambiente virtual
+venv/
+.venv/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite (ou outros arquivos de banco de dados locais)
+*.sqlite3
+
+# Logs
+*.log
+
+# Arquivos de mídia (uploads de usuários)
+media/
+
+# Arquivos estáticos coletados (caso use collectstatic)
+staticfiles/
+static/
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de testes temporários
+.coverage
+.tox/
+*.egg-info/
+dist/
+build/
+
+# Node (se usar npm ou webpack)
+node_modules/

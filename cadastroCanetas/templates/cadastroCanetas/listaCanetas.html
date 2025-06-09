@@ -1,0 +1,25 @@
+{% extends "cadastroCanetas/base.html" %}
+
+{% block content %}
+
+    <h3>Conteúdo</h3>
+
+    <ul class="list-group">
+        {% for caneta in canetas %}
+            <li class="list-group-item">
+               
+                <p><strong>Marca:</strong> {{ caneta.marca }}</p> 
+                <p><strong>Cor:</strong> {{ caneta.cor }}</p>
+                <p><strong>Preço:</strong> R$ {{ caneta.preco }}</p>
+                <p><strong>Data:</strong> {{ caneta.data_added|date:"d/m/Y H:i" }}</p>    
+                <a href="{% url "editarCaneta" caneta.pk %}" class="btn btn-sm btn-primary mb-1">editar caneta </a>
+                <a href="{% url 'excluirCaneta' caneta.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+            </li>
+            
+        {% empty %}
+            <li>Não há registros.</li>
+        {% endfor %}
+    </ul>
+    
+
+{% endblock content %}
